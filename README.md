@@ -14,5 +14,12 @@ Protocol &amp; referee Code for Mancala Game
 - In one moves you can print a number between 1 to 6.
 - ![Move Number in box](images/moves.png)
 
+# Rules:
+- Stones moves in counter-clockwise direction.
+- Last stone in my bowl allow me extra turn.
+- Last stone in my empty box gather oponents corresponding stones in my bowl , including my that stone.
+- Total score = total stones in my bowl + total stones in my row.
+
+
 
 
