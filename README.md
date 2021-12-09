@@ -20,6 +20,36 @@ Protocol &amp; referee Code for Mancala Game
 - Last stone in my empty box gather oponents corresponding stones in my bowl , including my that stone.
 - Total score = total stones in my bowl + total stones in my row.
 
+## Example:
+- AI written in cpp:
+  - Preprocess:
+	```
+		g++ ai.cpp -o ai.out
+	```
+  - CommandList in refree.py
+	```
+		["./ai.out"]
+	```
+- AI written in python:
+  - if Shebang (#!/bin/python) is added in the first line of the file
+	then CommandList in refree.py
+	```
+		["./ai.py"]
+	```
+  - else CommandList in refree.py
+	```
+		["python", "ai.py"]
+	```
+- AI written in java:
+  - Preprocess:
+	```
+		javac ai.java
+	```
+  - CommandList in refree.py
+	```
+		["java" , "ai"]
+	```
+	
 
 
 
