@@ -18,7 +18,12 @@ class Board:
 		]
 	
 	def __str__(self):
+
 		ret="          "
+		for i in range(6,0,-1):
+			ret+="%2d "% i
+		ret+="\n"
+		ret+="          "
 		for i in range(12,6,-1):
 			ret+="%2d "% self.board[i]
 		ret+="\n"
@@ -30,6 +35,10 @@ class Board:
 		ret+="          "
 		for i in range(0,6):
 			ret+="%2d "% self.board[i]
+		ret+="\n"
+		ret+="          "
+		for i in range(1,7):
+			ret+="%2d "% i
 		ret+="\n"
 		return ret
 
