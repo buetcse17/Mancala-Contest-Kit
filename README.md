@@ -17,7 +17,7 @@ Protocol &amp; referee Code for Mancala Game
 # Rules:
 - Stones moves in counter-clockwise direction.
 - Last stone in my bowl allow me extra turn.
-- Last stone in my empty box gather oponents corresponding stones in my bowl , including my that stone.
+- Last stone in my empty box gather oponents corresponding stones in my bowl (if not empty) , including my that stone.
 - Total score = total stones in my bowl + total stones in my row.
 
 ## Example:

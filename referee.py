@@ -57,11 +57,13 @@ class Board:
 		if move == 6:
 			return True
 		# check if last stone in my side and empty box
-		if move <=5 and 0<= move and self.board[move]==1:
+		target=12-move
+		if move <=5 and 0<= move and self.board[move]==1 and self.board[target]!=0:
+			print("Capturing opponent's stone\a")
 			self.board[6]+=self.board[move]
-			self.board[6]+=self.board[7+move]
+			self.board[6]+=self.board[target]
 			self.board[move]=0
-			self.board[7+move]=0
+			self.board[target]=0
 		return False
 
 	def hermove(self,move):
@@ -93,11 +95,13 @@ class Board:
 		if move == 13:
 			return True
 		# check if last stone in her side and empty box
-		if move <=12 and 7<= move and self.board[move]==1:
+		target=12-move
+		if move <=12 and 7<= move and self.board[move]==1 and self.board[target]!=0:
+			print("Capturing opponent's stone\a")
 			self.board[13]+=self.board[move]
-			self.board[13]+=self.board[move-7]
+			self.board[13]+=self.board[target]
 			self.board[move]=0
-			self.board[move-7]=0
+			self.board[target]=0
 		return False
 
 	def is_over(self):
