@@ -7,29 +7,29 @@ Protocol &amp; referee Code for Mancala Game
 - If PLAYER_TURN is 1 then you move first, Other wise you move second.
 - In your program your will first read 14 number in one line as current board, then you will print your move in one line.
   - Sample cpp Code:
-  ```
-	while(true)
-	{
-		int board[14];
-		for(int i=0;i<14;i++)
+	  ```cpp
+		while(true)
 		{
-			cin>>board[i];
+			int board[14];
+			for(int i=0;i<14;i++)
+			{
+				cin>>board[i];
+			}
+
+			/// do compute moves
+
+			cout<<move<<endl;
 		}
-
-		/// do compute moves
-
-		cout<<move<<endl;
-	}
-  ```
+	  ```
   - Sample python code
-  ```
-	while True:
-		board=map(int,input().split(' '))
+	  ```py
+		while True:
+			board=map(int,input().split(' '))
 
-		# do compute moves
-		
-		print(move,flush=True,end='\n')
-  ```
+			# do compute moves
+
+			print(move,flush=True,end='\n')
+	  ```
 - You can use any language you want, but you have to follow the protocol.
 
 ## Moves:
