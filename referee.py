@@ -198,23 +198,34 @@ def play_ai(my_ai_commands_list, her_ai_commands_list):
 	print(b)
 	myTurn=True
 
+	def get_board_out(board):
+		ret=""
+		for i in board:
+			ret += str(i)+ " "
+		return ret
+
 	while b.is_over() == False:
 		if myTurn:
+			print(get_board_out(b.board) , file=my_agent.stdin, flush=True,end="\n")
 			move=int(my_agent.stdout.readline())
+			print("my turn:"+str(move))
 			try:
 				myTurn=b.mymove(move)
-				print(move,file=her_agent.stdin,flush=True,end="\n")
 			except Exception as e:
 				print(e)
 			print(b)
 		else:
+			print(get_board_out(b.board) , file=her_agent.stdin, flush=True,end="\n")
 			move=int(her_agent.stdout.readline())
+			print("her turn:"+str(move))
 			try:
 				myTurn= not b.hermove(move)
-				print(move,file=my_agent.stdin,flush=True,end="\n")
 			except Exception as e:
 				print(e)
 			print(b)
+
+	my_agent.kill()
+	her_agent.kill()
 
 	print ("My score: %d"%b.my_score())
 	print ("Her score: %d"%b.her_score())
@@ -226,4 +237,5 @@ def play_ai(my_ai_commands_list, her_ai_commands_list):
 		print("Draw!")
 
 if __name__ == "__main__":
-	play_console()
+	# play_console()
+	play_ai(["./1.out"],["./1.out"])

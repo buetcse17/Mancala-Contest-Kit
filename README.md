@@ -5,9 +5,31 @@ Protocol &amp; referee Code for Mancala Game
 
 - Lets say your program is "a.exe" , then The referee will run your program as `./a.exe PLAYER_TURN` , where PLAYER_TURN is either 1 or 2.
 - If PLAYER_TURN is 1 then you move first, Other wise you move second.
-- If its your turn then you have to print the move in standard output ( printf , cout , print etc).
-- You can know your opponent's move by scanning input from standard input ( scanf , cin , input etc).
-- When any terminal state is reached throughout the game, you should exit your program.
+- In your program your will first read 14 number in one line as current board, then you will print your move in one line.
+  - Sample cpp Code:
+  ```
+	while(true)
+	{
+		int board[14];
+		for(int i=0;i<14;i++)
+		{
+			cin>>board[i];
+		}
+
+		/// do compute moves
+
+		cout<<move<<endl;
+	}
+  ```
+  - Sample python code
+  ```
+	while True:
+		board=map(int,input().split(' '))
+
+		# do compute moves
+		
+		print(move,flush=True,end='\n')
+  ```
 - You can use any language you want, but you have to follow the protocol.
 
 ## Moves:
